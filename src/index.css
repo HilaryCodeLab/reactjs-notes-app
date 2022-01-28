@@ -11,3 +11,89 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container{
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  background-color:rgb(233,233,233);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5rem;
+}
+
+.search input {
+  border: none;
+  background-color: rgb(233,233,233);
+}
+
+.search input:focus {
+  outline: none;
+}
+.note-list{
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ 
+}
+
+.note.new{
+  background-color: teal;
+}
+
+textarea{
+  border: none;
+  background-color: teal;
+  resize: none;
+  
+  
+}
+
+::placeholder{
+  color: black;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+.save{
+  background-color: grey;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+}
+
+.save:hover{
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.note {
+  background-color: yellowgreen;
+  padding: 1rem;
+  min-height: 170px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+  
+}
+
+.delete-icon:hover{
+  cursor: pointer;
+}
+
+.note-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
