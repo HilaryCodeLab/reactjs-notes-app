@@ -1,7 +1,7 @@
 import Search from './components/Search';
 import NoteList from './components/NoteList';
 import Header from './components/Header';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {nanoid} from 'nanoid';
 
 const App = () => {
@@ -31,6 +31,20 @@ const App = () => {
   const [searchText, setSearchText] = useState('');
 
   const [darkMode, setDarkMode] = useState(false);
+
+  //retrieve data from the local Storage
+  useEffect(() => {
+    const savedNotes = JSON.parse(localStorage.getItem('react-notes-app-data'));
+    
+    if(savedNotes){
+      setNotes(savedNotes);
+    }
+  }, []);
+
+  //save notes on local storage on the browser
+  useEffect(() => {
+    localStorage.setItem('react-notes-app-data', JSON.stringify(notes));
+  }, [notes]);
 
   const addNote = (text) => {
 		const date = new Date();
