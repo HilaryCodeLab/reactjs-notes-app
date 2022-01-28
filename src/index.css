@@ -18,6 +18,21 @@ code {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  min-height: 100vh;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.darkmode{
+  background-color: black;
+}
+
+.darkmode h1{
+  color: white;
 }
 
 .search{
